@@ -1,11 +1,11 @@
+import SideBAr from './components/navbar/Sidebar';
 
 function App() {
-
   return (
     <>
-      <p className='font-bold'>Hello World</p>
+      <SideBAr />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
