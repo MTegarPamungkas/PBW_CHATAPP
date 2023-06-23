@@ -6,7 +6,6 @@ import {
   Typography,
   CardBody,
   Input,
-  Checkbox,
   CardFooter,
   Button,
 } from '@material-tailwind/react';
@@ -58,7 +57,7 @@ const Pesan: FC<ComponentProps> = ({ children }) => {
           name: 'Room',
           users: [savedUsername, searchResults.username],
         })
-        .then((response) => {
+        .then(() => {
           // console.log('Room added:', response.data);
           toast.success('Room berhasil dibuat');
           // Lakukan sesuatu setelah room berhasil ditambahkan, seperti mengupdate state atau melakukan navigasi ke halaman baru

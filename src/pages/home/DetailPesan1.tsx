@@ -5,11 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { io } from 'socket.io-client';
 import notifSound from '../../assets/mixkit-confirmation-tone-2867.wav';
 import axios from 'axios';
-import {
-  getNameByUsername,
-  getPesanByRoomId,
-  receivedRoomsByUsername,
-} from '../../utils/APIRoutes';
+import { getNameByUsername, getPesanByRoomId } from '../../utils/APIRoutes';
 import moment from 'moment';
 
 const socket = io('http://localhost:3000');
@@ -44,7 +40,7 @@ const DetailPesan = (props: any) => {
         .then((data) => {
           setMessages(data.data);
         })
-        .catch((err) => null);
+        .catch(() => null);
     }
 
     socket.on('receiveMessage', (message) => {

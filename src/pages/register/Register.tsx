@@ -1,17 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useNavigate, useLocation, NavLink } from 'react-router-dom';
-import { loginRoute, registerRoute } from '../../utils/APIRoutes';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { registerRoute } from '../../utils/APIRoutes';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
   // const navigate = useNavigate();
 
-  const navigate = useNavigate();
-  const location = useLocation();
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

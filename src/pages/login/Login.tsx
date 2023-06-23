@@ -2,7 +2,7 @@
 // import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { loginRoute } from '../../utils/APIRoutes';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,7 +12,6 @@ const Login = () => {
   // const navigate = useNavigate();
 
   const navigate = useNavigate();
-  const location = useLocation();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   localStorage.clear();
@@ -45,7 +44,7 @@ const Login = () => {
         }
         toast.error(data.message);
       })
-      .catch((e) => {
+      .catch(() => {
         toast.error('Error code 500');
       });
 

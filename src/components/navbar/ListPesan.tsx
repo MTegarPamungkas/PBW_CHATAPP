@@ -15,7 +15,7 @@ const ListPesan = (props: any) => {
   const [lastMessage, setLastMessage] = useState('');
   const [timeLastMessage, setTimeLastMessage] = useState<any>('');
   const savedUsername = localStorage.getItem('username');
-  const unixTimestampNow = moment().valueOf();
+  // const unixTimestampNow = moment().valueOf();
 
   const getName = async (username: string) => {
     await axios.get(`${getNameByUsername}/${username}`).then((response) => {
